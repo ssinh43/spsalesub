@@ -386,7 +386,7 @@ body {
    HOW IT WORKS SECTION
 ================================ */
 .how-it-works {
-    background: radial-gradient(circle at top, #1b1b1b, #0c0c0c);
+    background: linear-gradient(145deg, #0f1320, #0a0d16);
     padding: 100px 0;
     color: #fff;
     position: relative;
@@ -483,7 +483,7 @@ body {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: radial-gradient(circle at top, #222, #111);
+    background: linear-gradient(145deg, #0f1320, #0a0d16);
     box-shadow:
         0 0 40px rgba(245,193,108,0.25),
         inset 0 0 40px rgba(255,255,255,0.05);
@@ -578,7 +578,7 @@ body {
    FOOTER
 ================================ */
 .footer {
-    background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+    background: linear-gradient(145deg, #0f1320, #0a0d16);
     color: #cfcfcf;
     padding: 80px 0 30px;
     margin-top: 120px;

@@ -22,7 +22,7 @@
 .terms-box {
   max-width: 900px;
   margin: 60px auto 0;
-  background: rgba(255, 255, 255, 0.04);
+  background: radial-gradient(circle at top, #111827, #020617);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 40px;
