@@ -2,164 +2,371 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Đặt hàng | SMM Panel</title>
+  <title>Đặt hàng | spsalesub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dathang-custom.css">
 </head>
 
-<body class="bg-light">
+<body>
 
-<div class="container-fluid">
-  <div class="row">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-3d">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <span class="logo-3d me-2">
+        <img src="images/logo.png" alt="spsalesub Logo" width="40" height="40">
+      </span>
+      <span class="logo-text-3d text-bold">SPSALESUB</span>
+    </a>
 
-    <!-- SIDEBAR -->
-    <aside class="col-lg-2 d-none d-lg-block bg-dark text-white min-vh-100 p-3">
-      <h5 class="fw-bold mb-4">🔥 MUASUBNGON</h5>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="small text-secondary mb-2">DASHBOARD</div>
-      <ul class="nav flex-column mb-3">
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-primary rounded" href="#">
-            <i class="bi bi-cart"></i> Đặt hàng
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Lịch sử đơn</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Bảo hành</a>
-        </li>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mx-auto nav-3d">
+        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#tinh-nang">Tính năng</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#dich-vu">Dịch vụ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">API</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Hỗ trợ</a></li>
+        <li class="nav-item"><a class="nav-link" href="dieukhoan.html">Điều khoản</a></li>
       </ul>
 
-      <div class="small text-secondary mb-2">TÀI CHÍNH</div>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Nạp tiền</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Dòng tiền</a>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="col-lg-10 p-4">
-
-      <!-- THÔNG BÁO -->
-      <div class="alert alert-primary d-flex align-items-center mb-4">
-        <i class="bi bi-bell fs-4 me-3"></i>
-        <div>
-          <strong>Thông báo:</strong> Tham gia nhóm Facebook để nhận thông tin mới nhất từ hệ thống.
-        </div>
+      <div class="d-flex gap-2">
+        <a href="login.html" class="btn btn-outline-order-3d" id="navbar-login-btn">Đăng Nhập</a>
+        <a href="register.html" class="btn btn-outline-order-3d" id="navbar-signup-btn" style="display: none;">Đăng Ký</a>
+        <a href="dathang.html" class="btn btn-order-3d" id="navbar-order-btn" style="display: none;">Đặt hàng</a>
       </div>
+    </div>
+  </div>
+</nav>
 
-      <div class="row g-4">
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="col-lg-10 p-4 main-content-3d">
 
-        <!-- FORM ĐẶT HÀNG -->
-        <div class="col-lg-8">
-          <div class="card shadow-sm">
-            <div class="card-body">
+      <!-- Main Content Grid -->
+      <div class="row g-3">
 
-              <h5 class="mb-3">
-                <i class="bi bi-cart"></i> Đặt hàng
+        <!-- LEFT: SIDEBAR MENU -->
+        <div class="col-lg-3">
+          <div class="card-3d h-100">
+            <div class="card-body-3d" style="padding: 0; display: flex; flex-direction: column;">
+              <div style="padding: 1.25rem 1.5rem;">
+                <div class="section-label mb-2" style="font-size: 12px; letter-spacing: 1px;">DASHBOARD</div>
+                <ul class="nav flex-column nav-sidebar" style="gap: 0.35rem;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="background: #ffc107; color: #1a1f2b; border-radius: 6px; padding: 8px 12px; font-size: 14px;">
+                      <i class="bi bi-cart-fill"></i> Tạo đơn hàng
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding: 8px 12px; font-size: 14px;">
+                      <i class="bi bi-clock-history"></i> Lịch sử đơn
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding: 8px 12px; font-size: 14px;">
+                      <i class="bi bi-shield-check"></i> Bảo hành
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="section-label mb-2" style="font-size: 12px; letter-spacing: 1px;">TÀI CHÍNH</div>
+                <ul class="nav flex-column nav-sidebar" style="gap: 0.35rem;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding: 8px 12px; font-size: 14px;">
+                      <i class="bi bi-wallet"></i> Nạp tiền
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="padding: 8px 12px; font-size: 14px;">
+                      <i class="bi bi-graph-up"></i> Dòng tiền
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); flex-grow: 1; display: flex; flex-direction: column;">
+                <div style="text-align: center; flex: 1;">
+                  <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #ffc107, #ffb300); border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; color: #1a1f2b;">U</div>
+                  <h6 class="text-white" style="margin: 0 0 3px; font-size: 14px;">Người dùng</h6>
+                  <p class="text-muted" style="margin: 0; font-size: 11px;">User_123</p>
+                </div>
+                <div style="margin: 12px 0; height: 1px; background: rgba(255,255,255,0.1);"></div>
+                <div style="margin-bottom: 12px;">
+                  <p style="font-size: 11px; color: #b8b8b8; margin: 0 0 4px;">Số dư:</p>
+                  <p style="font-size: 15px; font-weight: bold; margin: 0; color: #ffc107;">0đ</p>
+                </div>
+                <button class="btn btn-order-3d w-100" style="padding: 7px 0; font-size: 12px; margin-top: auto;">
+                  Nạp tiền
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER: ORDER FORM -->
+        <div class="col-lg-5">
+          <div class="card-3d h-100">
+            <div class="card-header-3d">
+              <h5 class="mb-0" style="font-size: 16px;">
+                <i class="bi bi-cart-fill"></i> Tạo Đơn Hàng
               </h5>
+            </div>
+            <div class="card-body-3d">
 
-              <!-- Tìm nhanh -->
-              <div class="mb-3">
-                <label class="form-label">Tìm nhanh dịch vụ</label>
-                <select class="form-select">
-                  <option>-- Tìm và chọn dịch vụ nhanh --</option>
-                </select>
-              </div>
-
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Nền tảng *</label>
-                  <select class="form-select">
-                    <option>Latest Services</option>
+              <form>
+                <!-- Platform & Category Row -->
+                <div class="form-section-3d mb-2">
+                  <label class="form-label-3d" style="font-size: 13px;">📱 Nền tảng *</label>
+                  <select class="form-select-3d" required>
+                    <option value="">-- Chọn --</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="twitter">Twitter</option>
                   </select>
                 </div>
 
-                <div class="col-md-6">
-                  <label class="form-label">Phân loại *</label>
-                  <select class="form-select">
-                    <option>TikTok Followers</option>
+                <!-- Service Type -->
+                <div class="form-section-3d mb-2">
+                  <label class="form-label-3d" style="font-size: 13px;">📂 Loại dịch vụ *</label>
+                  <select class="form-select-3d" required>
+                    <option value="">-- Chọn --</option>
+                    <option value="followers">Followers</option>
+                    <option value="likes">Likes</option>
+                    <option value="views">Views</option>
+                    <option value="comments">Comments</option>
                   </select>
                 </div>
-              </div>
 
-              <div class="mt-3">
-                <label class="form-label">Dịch vụ *</label>
-                <select class="form-select">
-                  <option>#971 | TikTok Followers | BOT | 50K/Day</option>
-                </select>
-              </div>
+                <!-- Service Selection -->
+                <div class="form-section-3d mb-2">
+                  <label class="form-label-3d" style="font-size: 13px;">⚙️ Dịch vụ *</label>
+                  <select class="form-select-3d" required>
+                    <option value="">-- Chọn dịch vụ --</option>
+                    <option value="1">#001 | TikTok Followers</option>
+                    <option value="2">#002 | TikTok Likes</option>
+                    <option value="3">#003 | Instagram Followers</option>
+                  </select>
+                </div>
 
-              <div class="mt-3">
-                <label class="form-label">Liên kết / UID *</label>
-                <input type="text" class="form-control" placeholder="Nhập link hoặc UID...">
-              </div>
+                <!-- Link/Username -->
+                <div class="form-section-3d mb-2">
+                  <label class="form-label-3d" style="font-size: 13px;">🔗 Link / ID *</label>
+                  <input type="text" class="form-control-3d" id="order-link" placeholder="Link/ID" required>
+                </div>
 
-              <div class="mt-3">
-                <label class="form-label">Số lượng *</label>
-                <input type="number" class="form-control" value="1000">
-              </div>
+                <!-- Quantity -->
+                <div class="form-section-3d mb-2">
+                  <label class="form-label-3d" style="font-size: 13px;">📊 Số lượng *</label>
+                  <div class="input-group">
+                    <input type="number" class="form-control-3d" id="order-qty" min="100" max="100000" value="1000" required>
+                    <span class="input-group-text input-addon-3d">cái</span>
+                  </div>
+                </div>
 
-              <button class="btn btn-primary w-100 mt-4">
-                <i class="bi bi-lightning-charge"></i> Tạo đơn hàng
-              </button>
+                <!-- Price Summary -->
+                <div class="price-summary-3d mb-3" style="padding: 10px; border-radius: 6px; background: rgba(255, 193, 7, 0.05); border: 1px solid rgba(255, 193, 7, 0.2);">
+                  <div class="price-row" style="font-size: 12px; margin-bottom: 5px;">
+                    <span>Giá:</span>
+                    <span>$0.50 / 1K</span>
+                  </div>
+                  <div class="price-row" style="font-size: 12px; margin-bottom: 6px;">
+                    <span>SL:</span>
+                    <span id="qty-display">1,000</span>
+                  </div>
+                  <div class="price-row-total" style="font-size: 14px; font-weight: bold; padding-top: 6px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <span>Tổng:</span>
+                    <span id="total-price" style="color: #ffc107;">$0.50</span>
+                  </div>
+                </div>
 
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-order-3d w-100" style="padding: 10px 0; font-size: 14px;">
+                  <i class="bi bi-lightning-charge"></i> Tạo Đơn
+                </button>
+              </form>
             </div>
           </div>
         </div>
 
-        <!-- TÀI KHOẢN -->
-        <div class="col-lg-4">
-          <div class="card shadow-sm">
-            <div class="card-body text-center">
-
-              <div class="rounded-circle bg-secondary text-white mx-auto mb-2"
-                   style="width:70px;height:70px;line-height:70px;font-size:22px;">
-                LQ
+        <!-- RIGHT 1: ACCOUNT INFO -->
+        <div class="col-lg-2">
+          <div class="card-3d">
+            <div class="card-header-3d text-center">
+              <h5 class="mb-0" style="font-size:14px;">👤 Tài Khoản</h5>
+            </div>
+            <div class="card-body-3d">
+              <div class="account-info-3d" style="text-align:center;">
+                <div style="width:44px;height:44px;background:linear-gradient(135deg,#ffc107,#ffb300);border-radius:50%;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#1a1f2b;">U</div>
+                <h6 class="text-white" style="margin:0 0 4px;font-size:13px;">Người Dùng</h6>
+                <p class="text-muted" style="margin:0;font-size:11px;">User_123</p>
+                <div style="height:10px"></div>
+                <div style="text-align:left;font-size:12px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="color:#b8b8b8;">Cấp bậc</span><span style="color:#ffc107;font-weight:700;">Đồng</span></div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="color:#b8b8b8;">Tổng nạp</span><span>0đ</span></div>
+                  <div style="display:flex;justify-content:space-between;"><span style="color:#b8b8b8;">Số dư</span><span style="color:#ffc107;font-weight:700;">0đ</span></div>
+                </div>
+                <div style="height:10px"></div>
+                <button class="btn btn-order-3d w-100" style="padding:8px 0;font-size:12px;margin-bottom:6px;">Nạp Tiền</button>
+                <button class="btn btn-outline-order-3d w-100" style="padding:8px 0;font-size:12px;">Cài Đặt</button>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <h6 class="mb-0">Lạc Quý</h6>
-              <small class="text-muted">@wpquylac_plwf</small>
-
-              <hr>
-
-              <div class="d-flex justify-content-between mb-2">
-                <span>Số dư</span>
-                <strong class="text-success">0đ</strong>
+        <!-- RIGHT 2: BENEFITS -->
+        <div class="col-lg-2">
+          <div class="card-3d">
+            <div class="card-header-3d text-center">
+              <h5 class="mb-0" style="font-size:14px;">⭐ Lợi Ích</h5>
+            </div>
+            <div class="card-body-3d" style="padding:0.8rem;">
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;gap:8px;align-items:flex-start;padding:6px;border-radius:6px;background:rgba(255,193,7,0.04);">
+                  <div style="font-size:16px;flex-shrink:0;">🚀</div>
+                  <p style="margin:0;font-size:12px;color:#e0e0e0;">Tốc độ siêu nhanh</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;padding:6px;border-radius:6px;background:rgba(255,193,7,0.03);">
+                  <div style="font-size:16px;flex-shrink:0;">🔒</div>
+                  <p style="margin:0;font-size:12px;color:#e0e0e0;">An toàn 100%</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;padding:6px;border-radius:6px;background:rgba(255,193,7,0.04);">
+                  <div style="font-size:16px;flex-shrink:0;">💰</div>
+                  <p style="margin:0;font-size:12px;color:#e0e0e0;">Giá tốt nhất</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;padding:6px;border-radius:6px;background:rgba(255,193,7,0.03);">
+                  <div style="font-size:16px;flex-shrink:0;">⏰</div>
+                  <p style="margin:0;font-size:12px;color:#e0e0e0;">Hỗ trợ 24/7</p>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-start;padding:6px;border-radius:6px;background:rgba(255,193,7,0.04);">
+                  <div style="font-size:16px;flex-shrink:0;">✅</div>
+                  <p style="margin:0;font-size:12px;color:#e0e0e0;">Bảo hành 30 ngày</p>
+                </div>
               </div>
-
-              <div class="d-flex justify-content-between mb-2">
-                <span>Tổng nạp</span>
-                <strong>0đ</strong>
-              </div>
-
-              <div class="d-flex justify-content-between mb-3">
-                <span>Cấp bậc</span>
-                <span class="badge bg-secondary">Đồng</span>
-              </div>
-
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary">Nạp tiền</button>
-                <button class="btn btn-outline-primary">Tài khoản</button>
-              </div>
-
             </div>
           </div>
         </div>
 
       </div>
+
     </main>
 
   </div>
 </div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-3d">
+  <div class="container">
+    
+    <div class="footer-content">
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-section">
+            <div class="footer-brand-3d">
+              <img src="images/logo.png" alt="spsalesub Logo" width="45" height="45" class="footer-logo">
+              <h4>SPSALESUB</h4>
+            </div>
+            <p class="footer-text">
+              Nền tảng SMM Panel tự động hàng đầu Việt Nam với 3000+ dịch vụ chất lượng cao. 
+              Dịch vụ nhanh, ổn định và an toàn 24/7 cho tất cả nền tảng mạng xã hội.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-icon" title="Facebook">f</a>
+              <a href="#" class="social-icon" title="Telegram">✈</a>
+              <a href="#" class="social-icon" title="Twitter">𝕏</a>
+              <a href="#" class="social-icon" title="Email">@</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-section">
+            <h5 class="footer-section-title">Liên kết</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="index.html#dich-vu">Dịch vụ</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="dieukhoan.html">Điều khoản</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h5 class="footer-section-title">Tài khoản</h5>
+            <ul class="footer-links">
+              <li><a href="login.html">Đăng nhập</a></li>
+              <li><a href="register.html">Đăng ký</a></li>
+              <li><a href="dathang.html">Nạp tiền</a></li>
+              <li><a href="dathang.html">Đặt hàng</a></li>
+              <li><a href="#">Lịch sử giao dịch</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h5 class="footer-section-title">Hỗ trợ</h5>
+            <ul class="footer-links">
+              <li><a href="#">Ticket hỗ trợ</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Tài liệu API</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Điều kiện sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-3d">
+        <div class="footer-copyright">
+          <p>&copy; 2026 <strong>spsalesub.com</strong> — Tất cả quyền được bảo lưu.</p>
+        </div>
+        <div class="footer-payments">
+          <span class="payment-method btc" title="Bitcoin">₿</span>
+          <span class="payment-method eth" title="Ethereum">Ξ</span>
+          <span class="payment-method usdt" title="USDT">₮</span>
+          <span class="payment-method momo" title="Momo">M</span>
+          <span class="payment-method bank" title="Ngân hàng">🏦</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+// Update quantity display and price
+document.getElementById('order-qty').addEventListener('input', function() {
+  const qty = this.value || 0;
+  const qtyFormatted = new Intl.NumberFormat('vi-VN').format(qty);
+  document.getElementById('qty-display').textContent = qtyFormatted;
+  
+  const pricePerK = 0.50;
+  const total = (qty / 1000) * pricePerK;
+  document.getElementById('total-price').textContent = '$' + total.toFixed(2);
+});
+</script>
 
 </body>
 </html>

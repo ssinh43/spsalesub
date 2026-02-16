@@ -2,22 +2,22 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Điều khoản dịch vụ | spsalesub</title>
+  <title>Đăng Nhập | spsalesub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/dieukhoan.css">
+  <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR (dùng chung) ===== -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-3d">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <span class="logo-3d me-2">
         <img src="images/logo.png" alt="spsalesub Logo" width="40" height="40">
       </span>
-      <span class="logo-text-3d">spsalesub</span>
+      <span class="logo-text-3d text-bold">SPSALESUB</span>
     </a>
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -31,75 +31,66 @@
         <li class="nav-item"><a class="nav-link" href="index.html#dich-vu">Dịch vụ</a></li>
         <li class="nav-item"><a class="nav-link" href="#">API</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Hỗ trợ</a></li>
-        <li class="nav-item"><a class="nav-link active" href="dieukhoan.html">Điều khoản</a></li>
+        <li class="nav-item"><a class="nav-link" href="dieukhoan.html">Điều khoản</a></li>
       </ul>
-      <div class="d-flex gap-2">
-        <a href="login.html" class="btn btn-outline-order-3d" id="navbar-login-btn">Đăng Nhập</a>
-        <a href="register.html" class="btn btn-outline-order-3d" id="navbar-signup-btn" style="display: none;">Đăng Ký</a>
-        <a href="dathang.html" class="btn btn-order-3d" id="navbar-order-btn" style="display: none;">Đặt hàng</a>
-      </div>
+
+      <a href="dathang.html" class="btn btn-order-3d">Đặt hàng</a>
     </div>
   </div>
 </nav>
 
-<!-- ===== TERMS ===== -->
-<section class="terms-section">
-  <div class="container">
-
-    <div class="terms-header text-center">
-      <span class="badge badge-service">ĐIỀU KHOẢN SỬ DỤNG</span>
-      <h1>Điều khoản & Điều kiện</h1>
-      <p>
-        Khi sử dụng dịch vụ tại <strong>spsalesub</strong>, bạn đồng ý tuân thủ
-        các điều khoản và chính sách được nêu dưới đây.
-      </p>
-    </div>
-
-    <div class="terms-box">
-
-      <div class="terms-item">
-        <h4>1. Chấp nhận điều khoản</h4>
-        <p>
-          Khi truy cập và sử dụng website, bạn xác nhận đã đọc, hiểu và đồng ý
-          với toàn bộ điều khoản dịch vụ của chúng tôi.
-        </p>
+<!-- ===== LOGIN SECTION ===== -->
+<section class="auth-section">
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="auth-container">
+      
+      <div class="auth-header text-center mb-5">
+        <h1 class="auth-title">Đăng Nhập</h1>
+        <p class="auth-subtitle">Chào mừng quay lại! Đăng nhập để tiếp tục</p>
       </div>
 
-      <div class="terms-item">
-        <h4>2. Điều kiện sử dụng dịch vụ</h4>
-        <p>
-          Người dùng không được sử dụng dịch vụ vào các mục đích vi phạm pháp
-          luật, lừa đảo, spam hoặc gây ảnh hưởng tiêu cực đến bên thứ ba.
-        </p>
+      <form class="auth-form">
+        <div class="form-group mb-4">
+          <label for="email" class="form-label">Email hoặc Tên đăng nhập</label>
+          <input type="email" class="form-control form-control-auth" id="email" placeholder="Nhập email của bạn" required>
+        </div>
+
+        <div class="form-group mb-4">
+          <label for="password" class="form-label">Mật khẩu</label>
+          <input type="password" class="form-control form-control-auth" id="password" placeholder="Nhập mật khẩu" required>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="remember" checked>
+            <label class="form-check-label" for="remember">
+              Ghi nhớ tôi
+            </label>
+          </div>
+          <a href="#" class="auth-link">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="btn btn-login w-100" onclick="handleLoginSubmit(event)">Đăng Nhập</button>
+      </form>
+
+      <div class="auth-divider">
+        <span>Hoặc</span>
       </div>
 
-      <div class="terms-item">
-        <h4>3. Chính sách đơn hàng</h4>
-        <p>
-          Sau khi đơn hàng được xử lý, chúng tôi không hỗ trợ hoàn tiền trong
-          trường hợp dịch vụ đã hoàn thành đúng mô tả.
-        </p>
+      <div class="social-login">
+        <button class="btn btn-social" title="Đăng nhập bằng Google">
+          <i>G</i> Google
+        </button>
+        <button class="btn btn-social" title="Đăng nhập bằng Facebook">
+          <i>f</i> Facebook
+        </button>
       </div>
 
-      <div class="terms-item">
-        <h4>4. Trách nhiệm người dùng</h4>
-        <p>
-          Người dùng chịu trách nhiệm về nội dung và liên kết cung cấp khi sử
-          dụng dịch vụ. Chúng tôi không chịu trách nhiệm với các rủi ro phát sinh
-          từ phía người dùng.
-        </p>
-      </div>
-
-      <div class="terms-item">
-        <h4>5. Thay đổi điều khoản</h4>
-        <p>
-          Chúng tôi có quyền cập nhật hoặc thay đổi điều khoản bất cứ lúc nào
-          mà không cần thông báo trước.
-        </p>
+      <div class="auth-footer text-center mt-5">
+        <p>Chưa có tài khoản? <a href="register.html" class="auth-link-highlight">Đăng ký ngay</a></p>
       </div>
 
     </div>
-
   </div>
 </section>
 
