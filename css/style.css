@@ -71,42 +71,89 @@ body {
 .btn-order-3d {
   background: linear-gradient(145deg, #ffc107, #ffb300);
   color: #000;
-  font-weight: 700;
-  padding: 10px 26px;
-  border-radius: 40px;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 2px solid #ffc107;
   box-shadow:
-    0 10px 25px rgba(255, 193, 7, 0.5),
-    inset 0 -3px 6px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+    0 18px 45px rgba(255, 193, 7, 0.55),
+    inset 0 -6px 18px rgba(0,0,0,0.35);
+  transition: all 0.24s cubic-bezier(.2,.9,.2,1);
   text-decoration: none;
 }
 
 .btn-order-3d:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow:
-    0 15px 35px rgba(255, 193, 7, 0.7);
+    0 26px 70px rgba(255, 193, 7, 0.65),
+    inset 0 -3px 8px rgba(0,0,0,0.25);
+}
+
+/* Larger pill for hero-like actions (makes the main deposit CTA very prominent) */
+.btn-order-3d.btn-lg {
+  padding: 18px 24px;
+  font-size: 18px;
+  border-radius: 999px;
 }
 
 /* OUTLINE BUTTON */
 .btn-outline-order-3d {
   background: transparent;
-  border: 1.5px solid #ffc107;
+  border: 2px solid #ffc107;
   color: #ffc107;
   font-weight: 700;
-  padding: 9px 24px;
-  border-radius: 40px;
+  padding: 8px 18px;
+  border-radius: 999px;
   box-shadow: none;
-  transition: all 0.3s ease;
+  transition: all 0.18s ease;
   text-decoration: none;
   display: inline-block;
 }
 
 .btn-outline-order-3d:hover {
-  background: rgba(255, 193, 7, 0.1);
+  background: rgba(255, 193, 7, 0.08);
   border-color: #ffca2c;
   color: #ffca2c;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+  box-shadow: 0 12px 30px rgba(255, 193, 7, 0.18);
+}
+
+/* small variant for copy buttons */
+.btn-outline-order-3d.btn-sm {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-width: 1.5px;
+}
+
+/* Reference generator button (next to input) */
+#regen-ref {
+  background: linear-gradient(145deg, #ffc107, #ffb300);
+  color: #000;
+  border: 2px solid #ffc107;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 10px 22px;
+  margin-left: 8px;
+  font-size: 14px;
+  box-shadow: 0 16px 40px rgba(255, 193, 7, 0.5), inset 0 -4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.24s cubic-bezier(.2,.9,.2,1);
+  cursor: pointer;
+}
+
+#regen-ref:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 55px rgba(255, 193, 7, 0.6), inset 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#regen-ref:active {
+  transform: translateY(-1px);
+}
+
+/* Copy buttons inside bank card */
+#copy-account, #copy-name {
+  border-radius: 999px;
+  border-width: 2px;
+  border-color: #ffc107;
 }
 
 /* ===== HERO ===== */
@@ -326,16 +373,40 @@ body {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 30px;
-  border: 1px solid #374151;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: linear-gradient(145deg, #ffc107, #ffb300);
+  font-weight: 700;
+  box-shadow:
+    0 10px 25px rgba(255, 193, 7, 0.45),
+    inset 0 -2px 4px rgba(0,0,0,0.2);
 }
 
 .btn-service:hover {
-  background: #fbbf24;
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 35px rgba(255, 193, 7, 0.6);
+}
+
+/* Hero button variant */
+.btn-hero-3d {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 40px;
   color: #000;
-  box-shadow: 0 0 25px rgba(251, 191, 36, 0.5);
+  font-weight: 800;
+  background: linear-gradient(145deg, #ffc107, #ffb300);
+  box-shadow:
+    0 12px 30px rgba(255,193,7,0.5),
+    inset 0 -3px 6px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-hero-3d:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(255,193,7,0.65);
 }
 
 /* ===== STATS BOX ===== */
